@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项清单</title>
+    <link rel="stylesheet" href="../css/TodoList.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="../index.html">
+                    <span class="icon">
+                        <ion-icon name="compass-outline"></ion-icon>
+                    </span>
+                    <span class="title">Tina-Yo's Web</span>
+                </a>
+            </li>
+            <li>
+                <a href="./TypeGame.html">
+                    <span class="icon">
+                        <ion-icon name="rocket-outline"></ion-icon>
+                    </span>
+                    <span class="title">Typist Race~</span>
+                </a>
+            </li>
+            <li>
+                <a href="./TodoList.html">
+                    <span class="icon">
+                        <ion-icon name="reader-outline"></ion-icon>
+                    </span>
+                    <span class="title">Todo List~</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Minesweeper.html">
+                    <span class="icon">
+                        <ion-icon name="bug-outline"></ion-icon>
+                    </span>
+                    <span class="title">Minesweeper~</span>
+                </a>
+            </li>
+            <li>
+                <a href="./QuizPro.html">
+                    <span class="icon">
+                        <ion-icon name="library-outline"></ion-icon>
+                    </span>
+                    <span class="title">Quiz~</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Calendar.html">
+                    <span class="icon">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </span>
+                    <span class="title">Mood Calendar~</span>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html">
+                    <span class="icon">
+                        <ion-icon name="exit-outline"></ion-icon>
+                    </span>
+                    <span class="title">Go Back~</span>
+                </a>
+            </li>
+        </ul>
+        <div class="toggle"></div>
+    </div>
+    <div class="wrapper">
+        <header>Todo App</header>
+        <div class="inputField">
+            <input type="text" placeholder="Add your new todo">
+            <button><i class="fas fa-plus"></i></button>
+        </div>
+        <ul class="todoList">
+            <!-- data are comes from local storage -->
+        </ul>
+        <div class="footer">
+            <span>You have <span class="pendingTasks"></span> pending tasks</span>
+            <button>Clear All</button>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="../javascript/TodoList.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

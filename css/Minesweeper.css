@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    padding: 10px;
+    /* background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%); */
+    background: linear-gradient(to bottom, #fff5f6, #ffe0e5)
+  }
+
+#scoreboard {
+
+    display: flex;
+    text-align: center;
+}
+  
+
+
+canvas {
+    border: 0 solid ;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+
+.navigation {
+    position: fixed;
+    inset: 20px;
+    background: #ffc0cb;
+    width: 80px;
+    border-left: 10px solid #ffc0cb;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+}
+
+.navigation.active {
+    width: 230px;
+    border-radius: 20px;
+}
+
+.toggle {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background: #365fa1;
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background: #365fa1;
+    transform: translateY(5px);
+    transition: 0.5s;
+}
+
+.navigation.active .toggle::before {
+    transform: translateY(0px) rotate(-405deg);
+}
+
+.navigation.active .toggle::after {
+    transform: translateY(0px) rotate(225deg);
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    /* background: #fff; */
+}
+
+.navigation ul li:hover {
+    background: #fff;
+}
+
+.navigation ul li:nth-child(1) {
+    top: 20px;
+    margin-bottom: 40px;
+    background: none;
+}
+
+.navigation ul li:not(:first-child):hover::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 7.5px 7.5px 0 7.5px #fff;
+}
+
+.navigation ul li:not(:first-child):hover::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 7.5px -7.5px 0 7.5px #fff;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation ul li:hover:not(:first-child) a {
+    color: #365fa1;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+
+
+button{
+	background-color:#ff8099;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 13px 30px;
+    margin : 25px;
+	border-radius: 10px;
+	transition: .4s; 
+}
+button:hover{
+	background-color: transparent;
+	border: 2px solid #ff8099;
+	cursor: pointer;
+}
+.scoreboard {
+    display: flexbox;
+    text-align: center;
+    padding : 50px auto;
+    margin : 50px;
+    align-items: center;
+    justify-content: center;  
+    vertical-align: center; 
+}
+/* 
+.insidepart {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;   
+} */
